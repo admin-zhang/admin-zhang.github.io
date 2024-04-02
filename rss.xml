@@ -10,8 +10,32 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 02 Apr 2024 13:12:32 +0800</pubDate>
-        <lastBuildDate>Tue, 02 Apr 2024 13:12:32 +0800</lastBuildDate>
+        <pubDate>Tue, 02 Apr 2024 18:59:37 +0800</pubDate>
+        <lastBuildDate>Tue, 02 Apr 2024 18:59:37 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://blog.icoders.club/installGitOnLinux/</guid>
+            <title>Linux中手动安装Git</title>
+            <link>http://blog.icoders.club/installGitOnLinux/</link>
+            <category term="教程" scheme="http://blog.icoders.club/categories/course/" />
+            <category term="Linux" scheme="http://blog.icoders.club/categories/course/Linux/" />
+            <category term="Git" scheme="http://blog.icoders.club/categories/course/Linux/Git/" />
+            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
+            <category term="Git" scheme="http://blog.icoders.club/tags/Git/" />
+            <category term="环境搭建" scheme="http://blog.icoders.club/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
+            <pubDate>Tue, 02 Apr 2024 18:59:37 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;之所以写这篇文章的初衷是由于本人在 &lt;code&gt;CentOS7&lt;/code&gt;  使用 &lt;code&gt;yum&lt;/code&gt;  无法安装到最新版本的 git，通过查询&lt;a href=&#34;https://git-scm.com/&#34;&gt; Git 官网&lt;/a&gt;得知，需下载源码进行源码编译安装。又考虑到大多数人员对于 Linux 一知半解，无法快速上手，故写下这篇文章，以供参考。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;1-下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-下载&#34;&gt;#&lt;/a&gt; 1. 下载&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 此处以 V2.38.1 为例&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;wget&lt;/span&gt; https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.38.1.tar.gz&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;2-安装依赖包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-安装依赖包&#34;&gt;#&lt;/a&gt; 2. 安装依赖包&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; gcc perl-ExtUtils-MakeMaker&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 之所以选择先安装依赖再删除原有 &#39;git&#39;，是因为在安装上述依赖软件过程中，部分软件又会依赖 &#39;git&#39;，所以在此处应先安装依赖再删除 &#39;git&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;3-删除原有git版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-删除原有git版本&#34;&gt;#&lt;/a&gt; 3. 删除原有 git 版本&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum remove &lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;4-解压缩文件并移动至指定位置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-解压缩文件并移动至指定位置&#34;&gt;#&lt;/a&gt; 4. 解压缩文件并移动至指定位置&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 解压缩文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-zxvf&lt;/span&gt; git-2.38.1.tar.gz&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 将解压得到的文件夹移动到 /usr/local/soft/ 目录下&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; git-2.38.1 /usr/local/soft/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;5-编译安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-编译安装&#34;&gt;#&lt;/a&gt; 5. 编译安装&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 进入 git 目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /usr/local/soft/git-2.38.1/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 配置编译后的 git 安装位置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./configure &lt;span class=&#34;token parameter variable&#34;&gt;--prefix&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/usr/local/git --with-iconv&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/usr/local/libiconv&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 编译&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;6-配置环境变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-配置环境变量&#34;&gt;#&lt;/a&gt; 6. 配置环境变量&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 因安装的 git 非系统命令，此时使用 &#39;git --version&#39; 命令会报错：&#39;-bash: git command not found&#39;, 故需要先配置环境变量&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;export PATH=&lt;span class=&#34;token environment constant&#34;&gt;$PATH&lt;/span&gt;:/usr/local/git/bin&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; /etc/profile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 生效配置文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;source&lt;/span&gt; /etc/profile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;7-使用git-version命令查看最新版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-使用git-version命令查看最新版本&#34;&gt;#&lt;/a&gt; 7. 使用 &lt;code&gt;git --version&lt;/code&gt;  命令查看最新版本&lt;/h3&gt;
+&lt;h3 id=&#34;8-全局配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-全局配置&#34;&gt;#&lt;/a&gt; 8. 全局配置&lt;/h3&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; user.name &lt;span class=&#34;token comment&#34;&gt;# 配置用户名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; user.email &lt;span class=&#34;token comment&#34;&gt;# 配置邮箱&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://blog.icoders.club/%E9%AB%98%E9%A2%91%20SQL%2050%20%E9%A2%98%EF%BC%88%E5%9F%BA%E7%A1%80%E7%89%88%EF%BC%89/</guid>
             <title>高频 SQL 50 题（基础版）</title>
@@ -613,10 +637,10 @@
             <category term="教程" scheme="http://blog.icoders.club/categories/course/" />
             <category term="Java" scheme="http://blog.icoders.club/categories/course/java/" />
             <category term="项目部署" scheme="http://blog.icoders.club/categories/course/java/arrange/" />
+            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
             <category term="java" scheme="http://blog.icoders.club/tags/java/" />
             <category term="SpringBoot" scheme="http://blog.icoders.club/tags/SpringBoot/" />
             <category term="Vue" scheme="http://blog.icoders.club/tags/Vue/" />
-            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
             <category term="前后端分离" scheme="http://blog.icoders.club/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" />
             <pubDate>Tue, 02 Apr 2024 12:08:17 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;一-环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-环境搭建&#34;&gt;#&lt;/a&gt; 一、 环境搭建&lt;/h2&gt;
@@ -789,9 +813,9 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;通过 &lt;code&gt;ip&lt;/code&gt;  + 端口号访问（如： &lt;code&gt;127.0.0.1:80&lt;/code&gt; ，注：nginx 默认配置端口号为 80）&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gitee.com/admin-zhang/pic/raw/master/202404012113335.png&#34; alt=&#34;nginx安装成功效果展示图&#34;/&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gitee.com/admin-zhang/pic/raw/master/202404012113335.png&#34; alt=&#34;image-20240401211324219&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;注意事项&lt;/p&gt;
