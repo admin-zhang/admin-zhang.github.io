@@ -1,0 +1,70 @@
+statics: "/" # 静态文件根目录，可用于 CDN 加速
+assets: "assets" # 图片资源存放目录
+css: "css" # css 存放目录 (不建议改动)
+js: "js" # js 存放目录 (不建议改动)
+
+modules:
+  player: true # 启用音乐播放器
+  fireworks: true # 启用鼠标点击烟花特效
+  unlazyHash: false # 启用unlazy hash预览图支持
+  visibilityListener: false # 启用可见度监听器
+  tabs: true # 启用选项卡扩展支持，如需开启 summary 功能请一并开启
+  quiz: true # 启用文章内问题扩展支持
+  fancybox: true # 启用 fancybox 支持（不建议禁用）
+
+homeConfig:
+  gradient: false # 使用CSS渐变作为文章封面
+  # fixedCover 性能比默认的更好，且开启时将启用LCP优化和预加载
+  fixedCover: "" # 主页面cover(为空则使用bing随机图片)
+
+iconfont: "4491710_kspgbl7h4l"
+
+# 导航栏
+menu:
+  home: / || home
+  文章:
+    default: / || user
+    归档: /archives/ || list-alt
+    分类: /categories/ || th
+    标签: /tags/ || tags
+  友链: /friends || heart
+  链接: /links || magic
+  统计: /stat || stat
+
+
+
+# 侧边栏
+sidebar:
+  position: right # left/right分别对应左侧/右侧
+  avatar: avatar.png
+
+# 社交媒体
+social:
+  github: https://github.com/admin-zhang || github || "#191717"
+  gitee: https://gitee.com/admin-zhang || gitee || "#d81e06"
+
+# 底部
+# widgets:
+#   random_posts: true # 随机文章
+#   recent_comments: true # 显示最近评论
+
+# 页尾全站统计
+footer:
+  since: 2024 # 开始时间
+  count: true # 开启
+  icp: true
+# 文章界面统计
+post:
+  count: true # 开启
+
+darkmode: true # true/false分别对应打开/关闭夜间模式
+
+auto_scroll: true
+
+alternate: "iCoders" #站点大标题，（比 title 高一级，但仅在 index 显示）
+
+# 评论
+waline:
+  enable: true # 是否启用
+  serverURL: "https://icoders.zeabur.app" # 将此链接换成您自己的 Domains，主页链接后面不能加 /  会出错
+
