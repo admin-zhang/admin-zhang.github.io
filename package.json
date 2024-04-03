@@ -17,7 +17,7 @@
     "algoliasearch": "^4.22.1",
     "cheerio": "^1.0.0-rc.12",
     "esbuild": "^0.20.0",
-    "hexo": "^7.0.0",
+    "hexo": "^7.1.1",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-feed": "^1.1.2",
