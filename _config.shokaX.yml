@@ -1,3 +1,5 @@
+alternate: "碎银几两" #站点大标题，（比 title 高一级，但仅在 index 显示）
+
 statics: "/" # 静态文件根目录，可用于 CDN 加速
 assets: "assets" # 图片资源存放目录
 css: "css" # css 存放目录 (不建议改动)
@@ -31,8 +33,6 @@ menu:
   链接: /links || magic
   统计: /stat || stat
 
-
-
 # 侧边栏
 sidebar:
   position: right # left/right分别对应左侧/右侧
@@ -52,20 +52,34 @@ social:
 footer:
   since: 2024 # 开始时间
   count: true # 开启
+  createTime: "YYYY/MM/DD HH:MM:SS"
   icp: 
     enable: true
-    icon: "ICP.png"
-    icpnumber: "京ICP备2023036429号"
+    icon: "ICP.png" # 网安备案图片
+    icpnumber: "京ICP备2023036429号" # ICP备案号
+    beian: "京公网安备11011402053974号" # 网安备案号
+    recordcode: "11011402053974" # 网安备案链接中的recordcode参数
+
 
 # 文章界面统计
 post:
   count: true # 开启
 
 darkmode: true # true/false分别对应打开/关闭夜间模式
+auto_dark: # 自动亮/暗模式
+  enable: true #是否开启
+  start: 19 #开始时间
+  end: 7 #结束时间
 
 auto_scroll: true
 
-alternate: "碎银几两" #站点大标题，（比 title 高一级，但仅在 index 显示）
+# 赞赏
+reward:
+  # If true, reward will be displayed in every article by default.
+  enable: true
+  account:
+    wechatpay: /wechatpay.png
+    alipay: /alipay.png
 
 # 评论
 waline:
