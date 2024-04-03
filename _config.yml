@@ -116,7 +116,7 @@ deploy:
 
 markdown:
   render: # 渲染器设置
-    html: false # 过滤 HTML 标签
+    html: true # 过滤 HTML 标签
     xhtmlOut: true # 使用 '/' 来闭合单标签 （比如 <br />）。
     breaks: true # 转换段落里的 '\n' 到 <br>。
     linkify: true # 将类似 URL 的文本自动转换为链接。
@@ -209,3 +209,13 @@ minify:
       replaceSrc: true # 自动替换生成html中的本地图片链接为webp链接
       # 我们更建议使用 Service Worker 来在用户侧实现 replaceSrc 的功能，这将能够以一种侵入式更小的方式实现链接替换
     exclude:
+
+busuanzi:
+  pv:
+    enable: true
+    title: 本站总访问量
+    quantifier: 次
+  uv:
+    enable: true
+    title: 本站总访客量
+    quantifier: 次

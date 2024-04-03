@@ -52,7 +52,11 @@ social:
 footer:
   since: 2024 # 开始时间
   count: true # 开启
-  icp: true
+  icp: 
+    enable: true
+    icon: "ICP.png"
+    icpnumber: "京ICP备2023036429号"
+
 # 文章界面统计
 post:
   count: true # 开启
@@ -61,7 +65,7 @@ darkmode: true # true/false分别对应打开/关闭夜间模式
 
 auto_scroll: true
 
-alternate: "iCoders" #站点大标题，（比 title 高一级，但仅在 index 显示）
+alternate: "碎银几两" #站点大标题，（比 title 高一级，但仅在 index 显示）
 
 # 评论
 waline:

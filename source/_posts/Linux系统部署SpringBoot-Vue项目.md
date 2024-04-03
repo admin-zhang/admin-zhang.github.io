@@ -299,7 +299,7 @@ tags:
 
       2. 通过`ip`+端口号访问（如：`127.0.0.1:80`，注：nginx默认配置端口号为80）
 
-      ![image-20240401211324219](https://gitee.com/admin-zhang/pic/raw/master/202404012113335.png)
+         <img src="https://gitee.com/admin-zhang/pic/raw/master/202404012113335.png" alt="nginx安装成功效果展示图"/>
 
    6. 注意事项
 
