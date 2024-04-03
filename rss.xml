@@ -637,10 +637,10 @@
             <category term="教程" scheme="http://blog.icoders.club/categories/course/" />
             <category term="Java" scheme="http://blog.icoders.club/categories/course/java/" />
             <category term="项目部署" scheme="http://blog.icoders.club/categories/course/java/arrange/" />
-            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
             <category term="java" scheme="http://blog.icoders.club/tags/java/" />
             <category term="SpringBoot" scheme="http://blog.icoders.club/tags/SpringBoot/" />
             <category term="Vue" scheme="http://blog.icoders.club/tags/Vue/" />
+            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
             <category term="前后端分离" scheme="http://blog.icoders.club/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" />
             <pubDate>Tue, 02 Apr 2024 12:08:17 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;一-环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-环境搭建&#34;&gt;#&lt;/a&gt; 一、 环境搭建&lt;/h2&gt;
