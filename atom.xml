@@ -11,13 +11,12 @@
     <updated>2024-04-09T12:39:58.000Z</updated>
     <entry>
         <id>http://blog.icoders.club/interview-question-notes/</id>
-        <title>interview-question-notes</title>
+        <title>面试踩坑记录</title>
         <link rel="alternate" href="http://blog.icoders.club/interview-question-notes/"/>
-        <content type="html">&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+        <content type="html">&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
 &lt;p&gt;该文档旨在记录个人在面试过程中遇到的坑，一切皆为个人见解，希望能对您有所帮助，若您有不同见解，可于评论区评论，不胜感激～&lt;/p&gt;
 &lt;h2 id=&#34;java基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java基础&#34;&gt;#&lt;/a&gt; Java 基础&lt;/h2&gt;
-&lt;h3 id=&#34;1-在string和integer中的使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-在string和integer中的使用&#34;&gt;#&lt;/a&gt; 1.  &lt;code&gt;==&lt;/code&gt;  在 &lt;code&gt;String&lt;/code&gt;  和 &lt;code&gt;Integer&lt;/code&gt;  中的使用&lt;/h3&gt;
+&lt;h3 id=&#34;在string和integer中的使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在string和integer中的使用&#34;&gt;#&lt;/a&gt;  &lt;code&gt;==&lt;/code&gt;  在 &lt;code&gt;String&lt;/code&gt;  和 &lt;code&gt;Integer&lt;/code&gt;  中的使用&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;代码如下&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -856,10 +855,10 @@
         <category term="教程" scheme="http://blog.icoders.club/categories/course/" />
         <category term="Java" scheme="http://blog.icoders.club/categories/course/java/" />
         <category term="项目部署" scheme="http://blog.icoders.club/categories/course/java/arrange/" />
+        <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
         <category term="java" scheme="http://blog.icoders.club/tags/java/" />
         <category term="SpringBoot" scheme="http://blog.icoders.club/tags/SpringBoot/" />
         <category term="Vue" scheme="http://blog.icoders.club/tags/Vue/" />
-        <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
         <category term="前后端分离" scheme="http://blog.icoders.club/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" />
         <updated>2024-04-02T04:08:17.000Z</updated>
     </entry>
