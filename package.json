@@ -16,7 +16,7 @@
     "@waline/client": "^3.0.1",
     "algoliasearch": "^4.22.1",
     "cheerio": "^1.0.0-rc.12",
-    "esbuild": "^0.20.0",
+    "esbuild": "^0.21.0",
     "hexo": "^7.0.0",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-deployer-git": "^4.0.0",
