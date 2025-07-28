@@ -19,7 +19,7 @@
             <category term="面试" scheme="http://blog.icoders.club/categories/interview/" />
             <category term="Java" scheme="http://blog.icoders.club/tags/Java/" />
             <pubDate>Mon, 28 Jul 2025 17:13:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;1-请简述arraylist-和-linkedlist-的主要区别你在什么场景下会选择用-linkedlist&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-请简述arraylist-和-linkedlist-的主要区别你在什么场景下会选择用-linkedlist&#34;&gt;#&lt;/a&gt; 1. 请简述： &lt;code&gt;ArrayList&lt;/code&gt;  和  &lt;code&gt;LinkedList&lt;/code&gt;  的主要区别？你在什么场景下会选择用  &lt;code&gt;LinkedList&lt;/code&gt; ？&lt;/h3&gt;
+            <description><![CDATA[ &lt;h3 id=&#34;请简述arraylist-和-linkedlist-的主要区别你在什么场景下会选择用-linkedlist&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请简述arraylist-和-linkedlist-的主要区别你在什么场景下会选择用-linkedlist&#34;&gt;#&lt;/a&gt; 请简述： &lt;code&gt;ArrayList&lt;/code&gt;  和  &lt;code&gt;LinkedList&lt;/code&gt;  的主要区别？你在什么场景下会选择用  &lt;code&gt;LinkedList&lt;/code&gt; ？&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;答案：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ArrayList 底层是动态数组，支持快速随机访问（O (1)），插入删除慢（需要移动元素）。&lt;/li&gt;
@@ -69,7 +69,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;2-你了解-java-的内存模型jmm吗请说一下可见性-有序性和原子性的问题以及-java-是如何通过关键字来解决它们的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-你了解-java-的内存模型jmm吗请说一下可见性-有序性和原子性的问题以及-java-是如何通过关键字来解决它们的&#34;&gt;#&lt;/a&gt; 2. 你了解 Java 的内存模型（JMM）吗？请说一下可见性、有序性和原子性的问题，以及 Java 是如何通过关键字来解决它们的？&lt;/h3&gt;
+&lt;h3 id=&#34;你了解-java-的内存模型jmm吗请说一下可见性-有序性和原子性的问题以及-java-是如何通过关键字来解决它们的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#你了解-java-的内存模型jmm吗请说一下可见性-有序性和原子性的问题以及-java-是如何通过关键字来解决它们的&#34;&gt;#&lt;/a&gt; 你了解 Java 的内存模型（JMM）吗？请说一下可见性、有序性和原子性的问题，以及 Java 是如何通过关键字来解决它们的？&lt;/h3&gt;
 &lt;h4 id=&#34;1️⃣-原子性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1️⃣-原子性&#34;&gt;#&lt;/a&gt; 1️⃣ 原子性&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：操作是不可再分的最小单位，中间不会被线程切换打断。&lt;/li&gt;
@@ -117,7 +117,7 @@
 &lt;li&gt;有序性：执行顺序按代码顺序或 JMM 保证， &lt;code&gt;volatile&lt;/code&gt;  禁止指令重排序， &lt;code&gt;synchronized&lt;/code&gt;  建立 happens-before 关系。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;3-volatile-的底层原理及它能保证原子性吗如果不能那你遇到-volatile-i-这样的代码要怎么改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-volatile-的底层原理及它能保证原子性吗如果不能那你遇到-volatile-i-这样的代码要怎么改&#34;&gt;#&lt;/a&gt; 3. volatile 的底层原理及它能保证原子性吗？如果不能，那你遇到  &lt;code&gt;volatile i++&lt;/code&gt;  这样的代码要怎么改？&lt;/h3&gt;
+&lt;h3 id=&#34;volatile-的底层原理及它能保证原子性吗如果不能那你遇到-volatile-i-这样的代码要怎么改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#volatile-的底层原理及它能保证原子性吗如果不能那你遇到-volatile-i-这样的代码要怎么改&#34;&gt;#&lt;/a&gt; volatile 的底层原理及它能保证原子性吗？如果不能，那你遇到  &lt;code&gt;volatile i++&lt;/code&gt;  这样的代码要怎么改？&lt;/h3&gt;
 &lt;h4 id=&#34;1-volatile-的作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-volatile-的作用&#34;&gt;#&lt;/a&gt; 🔍 1.  &lt;code&gt;volatile&lt;/code&gt;  的作用&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;保证可见性&lt;/strong&gt;：对变量的写操作，会立刻刷新到主内存，其他线程读操作一定从主内存读取。&lt;/li&gt;
@@ -160,7 +160,7 @@
 &lt;li&gt;需用  &lt;code&gt;AtomicInteger&lt;/code&gt;  或加锁保证原子性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;4-你了解-java-中的线程池吗请简要说明线程池的-7-个参数含义以及任务提交后的执行流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-你了解-java-中的线程池吗请简要说明线程池的-7-个参数含义以及任务提交后的执行流程&#34;&gt;#&lt;/a&gt; 4. 你了解 Java 中的线程池吗？请简要说明线程池的 7 个参数含义，以及任务提交后的执行流程。&lt;/h3&gt;
+&lt;h3 id=&#34;你了解-java-中的线程池吗请简要说明线程池的-7-个参数含义以及任务提交后的执行流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#你了解-java-中的线程池吗请简要说明线程池的-7-个参数含义以及任务提交后的执行流程&#34;&gt;#&lt;/a&gt; 你了解 Java 中的线程池吗？请简要说明线程池的 7 个参数含义，以及任务提交后的执行流程。&lt;/h3&gt;
 &lt;h4 id=&#34;一-线程池的-7-个核心参数来自-threadpoolexecutor-构造函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-线程池的-7-个核心参数来自-threadpoolexecutor-构造函数&#34;&gt;#&lt;/a&gt; ✅ 一、线程池的 7 个核心参数（来自  &lt;code&gt;ThreadPoolExecutor&lt;/code&gt;  构造函数）&lt;/h4&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;ThreadPoolExecutor&lt;/span&gt; executor &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    corePoolSize&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;       &lt;span class=&#34;token comment&#34;&gt;// 核心线程数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    maximumPoolSize&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;// 最大线程数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    keepAliveTime&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;// 非核心线程存活时间&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    unit&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;               &lt;span class=&#34;token comment&#34;&gt;// 存活时间单位&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    workQueue&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;          &lt;span class=&#34;token comment&#34;&gt;// 阻塞队列&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    threadFactory&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;// 线程工厂（创建线程）&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    handler             &lt;span class=&#34;token comment&#34;&gt;// 拒绝策略&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;table&gt;
 &lt;thead&gt;
@@ -245,7 +245,7 @@
 &lt;li&gt;执行流程：先创建核心线程处理，满了放队列，队列满了再扩展线程，最后拒绝策略。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;5-你了解-spring-的声明式事务吗请回答&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-你了解-spring-的声明式事务吗请回答&#34;&gt;#&lt;/a&gt; 5.  你了解 Spring 的声明式事务吗？请回答：**&lt;/h3&gt;
+&lt;h3 id=&#34;你了解-spring-的声明式事务吗请回答&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#你了解-spring-的声明式事务吗请回答&#34;&gt;#&lt;/a&gt; 你了解 Spring 的声明式事务吗？请回答：**&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;@Transactional&lt;/code&gt;  注解一般写在什么地方？&lt;/li&gt;
 &lt;li&gt;默认情况下，哪些异常会触发事务回滚？&lt;/li&gt;
@@ -276,7 +276,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;6-简述-java-中的锁有哪些它们各自的特点和适用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-简述-java-中的锁有哪些它们各自的特点和适用场景&#34;&gt;#&lt;/a&gt; 6. 简述 Java 中的锁有哪些？它们各自的特点和适用场景？&lt;/h3&gt;
+&lt;h3 id=&#34;简述-java-中的锁有哪些它们各自的特点和适用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简述-java-中的锁有哪些它们各自的特点和适用场景&#34;&gt;#&lt;/a&gt; 简述 Java 中的锁有哪些？它们各自的特点和适用场景？&lt;/h3&gt;
 &lt;h4 id=&#34;1️⃣-悲观锁pessimistic-lock&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1️⃣-悲观锁pessimistic-lock&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1️⃣ 悲观锁（Pessimistic Lock）&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;假设并发冲突很频繁，所以操作之前先加锁，保证线程互斥。&lt;/li&gt;
@@ -339,7 +339,7 @@
 &lt;li&gt;还有读写锁、公平锁等。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;7-请简述-java-中-volatile-和-synchronized-的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-请简述-java-中-volatile-和-synchronized-的区别&#34;&gt;#&lt;/a&gt; 7. 请简述 Java 中  &lt;code&gt;volatile&lt;/code&gt;  和  &lt;code&gt;synchronized&lt;/code&gt;  的区别？&lt;/h3&gt;
+&lt;h3 id=&#34;请简述-java-中-volatile-和-synchronized-的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请简述-java-中-volatile-和-synchronized-的区别&#34;&gt;#&lt;/a&gt; 请简述 Java 中  &lt;code&gt;volatile&lt;/code&gt;  和  &lt;code&gt;synchronized&lt;/code&gt;  的区别？&lt;/h3&gt;
 &lt;h4 id=&#34;volatile-和-synchronized-的区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#volatile-和-synchronized-的区别&#34;&gt;#&lt;/a&gt; ✅  &lt;code&gt;volatile&lt;/code&gt;  和  &lt;code&gt;synchronized&lt;/code&gt;  的区别&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -436,7 +436,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;8-java-中的类加载机制是怎样的双亲委派模型是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-java-中的类加载机制是怎样的双亲委派模型是什么&#34;&gt;#&lt;/a&gt; 8. Java 中的类加载机制是怎样的？双亲委派模型是什么？&lt;/h3&gt;
+&lt;h3 id=&#34;java-中的类加载机制是怎样的双亲委派模型是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-中的类加载机制是怎样的双亲委派模型是什么&#34;&gt;#&lt;/a&gt; Java 中的类加载机制是怎样的？双亲委派模型是什么？&lt;/h3&gt;
 &lt;h4 id=&#34;java-类加载的生命周期阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-类加载的生命周期阶段&#34;&gt;#&lt;/a&gt; ✅ Java 类加载的生命周期阶段&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;加载（Loading）&lt;/strong&gt;
@@ -495,7 +495,7 @@
 &lt;li&gt;双亲委派模型：请求先委托给父加载器，父加载器找不到才自己加载，保证核心类安全。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;9-谈谈你对-java-内存泄漏的理解常见原因和排查方法有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-谈谈你对-java-内存泄漏的理解常见原因和排查方法有哪些&#34;&gt;#&lt;/a&gt; 9. 谈谈你对 Java 内存泄漏的理解，常见原因和排查方法有哪些？&lt;/h3&gt;
+&lt;h3 id=&#34;谈谈你对-java-内存泄漏的理解常见原因和排查方法有哪些&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谈谈你对-java-内存泄漏的理解常见原因和排查方法有哪些&#34;&gt;#&lt;/a&gt; 谈谈你对 Java 内存泄漏的理解，常见原因和排查方法有哪些？&lt;/h3&gt;
 &lt;h4 id=&#34;什么是内存泄漏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是内存泄漏&#34;&gt;#&lt;/a&gt; ✅ 什么是内存泄漏？&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;内存泄漏&lt;/strong&gt;指程序中不再使用的对象仍然被引用，导致垃圾回收器无法回收，从而导致可用内存减少，最终可能导致应用内存溢出（OOM）。&lt;/li&gt;
@@ -566,7 +566,7 @@
 &lt;p&gt;Java 内存泄漏是指不再使用的对象被持续引用，导致垃圾回收无法回收，最终可能发生内存溢出。常见原因包括静态集合无限制增长、监听器未注销、线程未关闭等。排查方法有使用 VisualVM、MAT 等工具分析堆内存，结合代码审查定位问题。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;10-java异常处理机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#10-java异常处理机制&#34;&gt;#&lt;/a&gt; 10. Java 异常处理机制？&lt;/h3&gt;
+&lt;h3 id=&#34;java异常处理机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java异常处理机制&#34;&gt;#&lt;/a&gt; Java 异常处理机制？&lt;/h3&gt;
 &lt;h4 id=&#34;1️⃣-异常分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1️⃣-异常分类&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1️⃣ 异常分类：&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Checked Exception（受检异常）&lt;/strong&gt;
@@ -613,7 +613,7 @@
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;11-java垃圾回收原理和常见回收器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-java垃圾回收原理和常见回收器&#34;&gt;#&lt;/a&gt; 11. Java 垃圾回收原理和常见回收器？&lt;/h3&gt;
+&lt;h3 id=&#34;java垃圾回收原理和常见回收器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java垃圾回收原理和常见回收器&#34;&gt;#&lt;/a&gt; Java 垃圾回收原理和常见回收器？&lt;/h3&gt;
 &lt;h4 id=&#34;java垃圾回收gc基本原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java垃圾回收gc基本原理&#34;&gt;#&lt;/a&gt; ✅ &lt;strong&gt;Java 垃圾回收（GC）基本原理&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Java 的垃圾回收机制自动管理内存，主要目的是回收不再使用的对象，释放内存，避免内存泄漏和溢出。&lt;/li&gt;
@@ -701,10 +701,10 @@
             <category term="教程" scheme="http://blog.icoders.club/categories/course/" />
             <category term="Java" scheme="http://blog.icoders.club/categories/course/java/" />
             <category term="项目部署" scheme="http://blog.icoders.club/categories/course/java/arrange/" />
+            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
             <category term="java" scheme="http://blog.icoders.club/tags/java/" />
             <category term="SpringBoot" scheme="http://blog.icoders.club/tags/SpringBoot/" />
             <category term="Vue" scheme="http://blog.icoders.club/tags/Vue/" />
-            <category term="Linux" scheme="http://blog.icoders.club/tags/Linux/" />
             <category term="前后端分离" scheme="http://blog.icoders.club/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" />
             <pubDate>Fri, 25 Jul 2025 12:08:17 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;一-环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-环境搭建&#34;&gt;#&lt;/a&gt; 一、 环境搭建&lt;/h2&gt;
