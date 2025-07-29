@@ -1,0 +1,627 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="" type="application/atom+xml"><link rel="alternate" type="application/json" title="" href="http://blog.icoders.club/feed.json"><link rel="preconnect" href="https://lf9-cdn-tos.bytecdntp.com"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="stylesheet" href="/css/app.css?v=0.4.2"><link rel="modulepreload" href="/js/chunk-2N4DYD35.js"><link rel="modulepreload" href="/js/chunk-ECZ3LG5D.js"><link rel="modulepreload" href="/js/chunk-I6CY6N4A.js"><link rel="modulepreload" href="/js/chunk-KZSKOY4M.js"><link rel="modulepreload" href="/js/chunk-QWLQUKSX.js"><link rel="modulepreload" href="/js/comments-AUNHBEKV.js"><link rel="modulepreload" href="/js/index.esm-O6LQS4SE.js"><link rel="modulepreload" href="/js/post-NR3WVKIL.js"><link rel="modulepreload" href="/js/quicklink-BQPWQUOJ.js"><link rel="modulepreload" href="/js/search-BBWMP3LS.js"><link rel="modulepreload" href="/js/siteInit.js"><link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@3.0.0-alpha.11/dist/waline.css" media="none" onload="this.media='all'"><link rel="preload" href="https://i.imgtg.com/2023/03/09/YS6XY.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://i.imgtg.com/2023/03/09/YS2LU.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://i.imgtg.com/2023/03/09/Y0xvg.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://i.imgtg.com/2023/03/09/YSj7p.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://i.imgtg.com/2023/03/09/Y0zdB.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://i.imgtg.com/2023/03/09/YSIlc.jpg" as="image" fetchpriority="high"><meta name="keywords" content="Java,ChatGPT"><link rel="canonical" href="http://blog.icoders.club/java-interview-basics-01/"><title>Java模拟面试题-基础篇-01</title><meta name="generator" content="Hexo 7.0.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Java模拟面试题-基础篇-01</h1><div class="meta"><span class="item" title="创建时间：2025-07-29 21:51:14"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2025-07-29T21:51:14+08:00">2025-07-29</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>11k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>10 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">碎银几两</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://i.imgtg.com/2023/03/09/YS6XY.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.imgtg.com/2023/03/09/YS2LU.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.imgtg.com/2023/03/09/Y0xvg.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.imgtg.com/2023/03/09/YSj7p.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.imgtg.com/2023/03/09/Y0zdB.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.imgtg.com/2023/03/09/YSIlc.jpg&quot;);"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/interview/" itemprop="item" rel="index" title="分类于面试"><span itemprop="name">面试<meta itemprop="position" content="0"></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" lang="zh-CN"><link itemprop="mainEntityOfPage" href="http://blog.icoders.club/java-interview-basics-01/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.png"><meta itemprop="name" content="张大爷"><meta itemprop="description" content="以梦为马，不负韶华, "></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content=""></span><div class="body md" itemprop="articleBody"><h2 id="java-面试模拟系列"><a class="anchor" href="#java-面试模拟系列">#</a> Java 面试模拟系列 🧠📘</h2>
+<blockquote>
+<p>该系列文档基于真实面试准备过程，通过 ChatGPT 辅助问答，对高频 Java 面试题进行整理与答疑。每篇文档聚焦一个主题，覆盖基础、集合、JVM、并发、网络等模块。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>文章标题</th>
+<th>内容简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="/java-interview-basics-01/" title="Java模拟面试题-基础篇-01">Java 模拟面试题(基础篇01)</a></td>
+<td>Java 基础知识模拟问答</td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="/java-interview-question-01/" title="Java模拟面试题（1）">Java 模拟面试题(1)</a></td>
+<td>集合框架、JMM 内存模型等基础进阶题</td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="/java-interview-question-02/" title="Java模拟面试题（2）">Java 模拟面试题(2)</a></td>
+<td>Java 四种引用类型等进阶题</td>
+</tr>
+<tr>
+<td>...</td>
+<td>🔄 持续更新中</td>
+<td>JVM、并发、Spring 等模块</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>📌 推荐使用场景：</p>
+<ul>
+<li>准备面试前的快速复盘</li>
+<li>学习 Java 各模块的知识要点</li>
+<li>与 ChatGPT 配合自测提问训练</li>
+</ul>
+<p>🚀 持续优化中，欢迎 Star &amp; 分享！</p>
+</blockquote>
+<h2 id="java-基础与进阶"><a class="anchor" href="#java-基础与进阶">#</a> 💡Java 基础与进阶</h2>
+<h3 id="问题1java-中-和-equals-的区别请举例说明"><a class="anchor" href="#问题1java-中-和-equals-的区别请举例说明">#</a> ❓问题 1：Java 中  <code>==</code>  和  <code>equals()</code>  的区别？请举例说明。</h3>
+<blockquote>
+<p>详解可参考： <a href="/String-in-Java/" title="深入理解 Java 中的 == 和 equals()（面试高频）">深入理解 Java 中的 == 和 equals()</a></p>
+</blockquote>
+<h4 id="分析可从如下角度进行回答"><a class="anchor" href="#分析可从如下角度进行回答">#</a> ✨分析：可从如下角度进行回答</h4>
+<ul>
+<li>对于基本类型 vs 引用类型</li>
+<li>equals 默认行为及如何重写</li>
+<li>常见面试陷阱，如 String 比较</li>
+</ul>
+<h4 id="答案"><a class="anchor" href="#答案">#</a> ✅答案：</h4>
+<p>在 Java 中， <code>==</code>  和  <code>equals()</code>  的区别主要体现在<strong>基本数据类型</strong>与<strong>引用类型</strong>的处理上：</p>
+<h5 id="对于基本类型"><a class="anchor" href="#对于基本类型">#</a> 🧩 对于基本类型：</h5>
+<ul>
+<li><code>==</code>  比较的是<strong>值是否相等</strong>。</li>
+<li><code>equals()</code>  ❌ 不适用于基本类型（编译报错）</li>
+</ul>
+<h5 id="对于引用类型"><a class="anchor" href="#对于引用类型">#</a> 🧩 对于引用类型：</h5>
+<ul>
+<li><code>==</code>  比较的是<strong>引用地址</strong>，也就是是否指向同一个对象。</li>
+<li><code>equals()</code>  默认继承自  <code>Object</code>  类，<strong>也是比较引用地址</strong>；<br>
+但许多类（如  <code>String</code> 、 <code>Integer</code> 、 <code>List</code> ）都重写了  <code>equals()</code>  方法，用来比较对象的<strong>内容</strong>是否相等。</li>
+</ul>
+<h5 id="示例代码"><a class="anchor" href="#示例代码">#</a> ✅ 示例代码：</h5>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token class-name">String</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token class-name">String</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">//false（不同对象）</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//true（内容相同）</span></pre></td></tr></tbody></table></figure><h4 id="追问stringintern-方法的作用是什么它与-有什么关系"><a class="anchor" href="#追问stringintern-方法的作用是什么它与-有什么关系">#</a> 📌 追问： <code>String.intern()</code>  方法的作用是什么？它与  <code>==</code>  有什么关系？</h4>
+<p><code>String.intern()</code>  是一个<strong> native 方法</strong>，它的作用是：</p>
+<blockquote>
+<p><strong>如果常量池中已经存在与当前字符串内容相同的字符串，则返回该字符串的引用；否则将当前字符串添加到常量池，并返回这个常量池中的引用。</strong></p>
+</blockquote>
+<p>因此，调用  <code>intern()</code>  后，我们可以使用  <code>==</code>  来比较是否为同一对象引用（即是否引用了常量池中的同一字符串）。</p>
+<h5 id="示例代码-2"><a class="anchor" href="#示例代码-2">#</a> 🔍 示例代码：</h5>
+<pre><code>java复制编辑String s1 = new String("hello");
+String s2 = "hello";
+
+System.out.println(s1 == s2);             // false（s1 是堆中对象，s2 是常量池）
+System.out.println(s1.intern() == s2);    // true（s1.intern() 返回常量池引用）
+</code></pre>
+<hr>
+<h4 id="总结"><a class="anchor" href="#总结">#</a> 🧾 总结：</h4>
+<ul>
+<li><code>==</code>  比较的是<strong>引用地址</strong>；</li>
+<li><code>equals()</code> （在重写后）比较的是<strong>对象内容</strong>；</li>
+<li><code>intern()</code>  用于<strong>将字符串放入常量池</strong>，从而可以使用  <code>==</code>  来比较字符串内容是否相同（前提是都来自常量池）。</li>
+</ul>
+<h3 id="问题2-java-的八种基本数据类型是什么它们各自的默认值是什么"><a class="anchor" href="#问题2-java-的八种基本数据类型是什么它们各自的默认值是什么">#</a> ❓问题 2： Java 的八种基本数据类型是什么？它们各自的默认值是什么？</h3>
+<p>Java 有 <strong>8 种基本数据类型</strong>，分为<strong>四类</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>占用字节</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>1 byte</td>
+<td>0</td>
+<td>整型，-128~127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 bytes</td>
+<td>0</td>
+<td>整型</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4 bytes</td>
+<td>0</td>
+<td>整型，默认整型</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8 bytes</td>
+<td>0L</td>
+<td>长整型</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4 bytes</td>
+<td>0.0f</td>
+<td>单精度浮点型</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 bytes</td>
+<td>0.0d</td>
+<td>双精度浮点型</td>
+</tr>
+<tr>
+<td>char</td>
+<td>2 bytes</td>
+<td>'\u0000'</td>
+<td>字符类型</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1 bit*</td>
+<td>false</td>
+<td>布尔类型</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>说明：boolean 实际上是由 JVM 实现决定占用空间，通常是 1 byte，而不是真正的 1 bit。</p>
+</blockquote>
+<h4 id="追问为什么-char-占两个字节java-中的-char-能表示哪些字符你对-unicode-的理解"><a class="anchor" href="#追问为什么-char-占两个字节java-中的-char-能表示哪些字符你对-unicode-的理解">#</a> <strong>📌 追问：为什么  <code>char</code>  占两个字节？Java 中的  <code>char</code>  能表示哪些字符？你对 Unicode 的理解？</strong></h4>
+<h5 id="分析"><a class="anchor" href="#分析">#</a> ✨ 分析：</h5>
+<p>请从以下几个方面作答：</p>
+<ul>
+<li><code>char</code>  在 Java 中占多少字节，为什么？</li>
+<li>Java 使用哪种字符集？</li>
+<li>Unicode 和 UTF-8 有什么关系？</li>
+<li>是否能表示中文、表情符等字符？</li>
+</ul>
+<h5 id="为什么-char-占两个字节"><a class="anchor" href="#为什么-char-占两个字节">#</a> 🔹 为什么  <code>char</code>  占两个字节？</h5>
+<p>在 Java 中， <code>char</code>  类型是 <strong>无符号的 16 位整数（2 字节）</strong>，用于表示一个<strong> Unicode 编码的字符</strong>（Unicode 编号范围从  <code>\u0000</code>  到  <code>\uFFFF</code> ，即 0~65535）。</p>
+<p>当时设计这样是为了支持国际化，尤其是中文、日文、韩文等字符。</p>
+<hr>
+<h5 id="java-中使用什么字符编码"><a class="anchor" href="#java-中使用什么字符编码">#</a> 🔹 Java 中使用什么字符编码？</h5>
+<p>Java 使用的是 <strong>Unicode 编码体系</strong>，内部使用 <strong>UTF-16</strong> 编码表示字符。</p>
+<ul>
+<li><code>char</code>  表示的是一个 UTF-16 单元（16-bit），所以最多只能直接表示 BMP（Basic Multilingual Plane，基本多文种平面）内的字符（即  <code>\u0000</code>  ~  <code>\uFFFF</code> ）；</li>
+<li>如果是扩展字符（如 emoji 表情 😊，Unicode 超过 0xFFFF），则需要两个  <code>char</code>  表示一个字符（称为 <strong>代理对 Surrogate Pair</strong>）。</li>
+</ul>
+<hr>
+<h5 id="unicode-vs-utf-8-vs-utf-16"><a class="anchor" href="#unicode-vs-utf-8-vs-utf-16">#</a> 🔹 Unicode vs UTF-8 vs UTF-16</h5>
+<table>
+<thead>
+<tr>
+<th>编码</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unicode</td>
+<td>一种字符集，给每个字符分配唯一编码编号</td>
+</tr>
+<tr>
+<td>UTF-8</td>
+<td>可变长编码（1~4 字节），常用于网络和文件存储</td>
+</tr>
+<tr>
+<td>UTF-16</td>
+<td>可变长编码（2 或 4 字节），Java 内部使用该编码方式</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Java 中使用 UTF-16 单元，每个 char 占 2 字节</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5 id="举个例子"><a class="anchor" href="#举个例子">#</a> 🔍 举个例子：</h5>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">char</span> c <span class="token operator">=</span> <span class="token char">'中'</span><span class="token punctuation">;</span>              <span class="token comment">// 占 2 字节，对应 Unicode \u4E2D</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token class-name">String</span> emoji <span class="token operator">=</span> <span class="token string">"😊"</span><span class="token punctuation">;</span>       <span class="token comment">// 实际占用两个 char，因为 Unicode 超过 0xFFFF</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>emoji<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出 2</span></pre></td></tr></tbody></table></figure><hr>
+<h5 id="小结"><a class="anchor" href="#小结">#</a> 📌 小结：</h5>
+<ul>
+<li><code>char</code>  是 2 字节，因为使用 UTF-16 单元。</li>
+<li>Java 使用 Unicode 编码，支持中文。</li>
+<li>一个  <code>char</code>  并不等于一个字符，尤其是在 emoji 表情或特殊语言字符时。</li>
+</ul>
+<h3 id="问题3string-stringbuilder-和-stringbuffer-有什么区别它们各自的适用场景"><a class="anchor" href="#问题3string-stringbuilder-和-stringbuffer-有什么区别它们各自的适用场景">#</a> ❓问题 3：String、StringBuilder 和 StringBuffer 有什么区别？它们各自的适用场景？</h3>
+<h4 id="string不可变对象"><a class="anchor" href="#string不可变对象">#</a> 🔹 String（不可变对象）</h4>
+<ul>
+<li>定义： <code>final</code>  类，内容不可变，每次修改都会创建新对象。</li>
+<li>特点：线程安全、效率较低（频繁拼接时容易产生大量中间对象）。</li>
+<li>场景：适用于字符串内容不会频繁变化的场景，如常量、配置参数等。</li>
+</ul>
+<h4 id="stringbuilder可变非线程安全"><a class="anchor" href="#stringbuilder可变非线程安全">#</a> 🔹 StringBuilder（可变，非线程安全）</h4>
+<ul>
+<li>定义：可变字符串容器，底层使用  <code>char[]</code>  实现。</li>
+<li>特点：非线程安全，但性能高。</li>
+<li>场景：<strong>单线程环境</strong>下频繁修改字符串的操作（如拼接、插入等）。</li>
+</ul>
+<h4 id="stringbuffer可变线程安全"><a class="anchor" href="#stringbuffer可变线程安全">#</a> 🔹 StringBuffer（可变，线程安全）</h4>
+<ul>
+<li>定义：与  <code>StringBuilder</code>  类似，但<strong>方法加了 synchronized</strong>，保证线程安全。</li>
+<li>特点：性能比  <code>StringBuilder</code>  略低，但在多线程下更安全。</li>
+<li>场景：<strong>多线程环境</strong>下操作字符串。</li>
+</ul>
+<hr>
+<h4 id="性能对比"><a class="anchor" href="#性能对比">#</a> ✅ 性能对比：</h4>
+<table>
+<thead>
+<tr>
+<th>操作对象</th>
+<th>线程安全</th>
+<th>性能</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>✅ 是</td>
+<td>❌ 低</td>
+<td>不变字符串</td>
+</tr>
+<tr>
+<td>StringBuilder</td>
+<td>❌ 否</td>
+<td>✅ 高</td>
+<td>单线程字符串拼接</td>
+</tr>
+<tr>
+<td>StringBuffer</td>
+<td>✅ 是</td>
+<td>⚠ 中等</td>
+<td>多线程字符串拼接</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="追问进阶你知道-string-为什么是不可变的吗它不可变的好处是什么"><a class="anchor" href="#追问进阶你知道-string-为什么是不可变的吗它不可变的好处是什么">#</a> 📌 追问（进阶）：你知道 String 为什么是不可变的吗？它不可变的好处是什么？</h4>
+<h5 id="为什么-string-是不可变的"><a class="anchor" href="#为什么-string-是不可变的">#</a> 🔹 为什么 String 是不可变的？</h5>
+<ol>
+<li><strong>底层结构</strong>
+<ul>
+<li><code>String</code>  内部使用  <code>final char[] value</code>  来存储字符；</li>
+<li><code>final</code>  保证引用不可变，整个  <code>String</code>  对象内容不能更改。</li>
+</ul>
+</li>
+<li><strong>类被 final 修饰</strong>
+<ul>
+<li><code>String</code>  是一个  <code>final</code>  类，不能被继承；</li>
+<li>防止子类修改其不可变语义（如重写  <code>hashCode()</code>  等）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h5 id="不可变的好处"><a class="anchor" href="#不可变的好处">#</a> 🔒 不可变的好处：</h5>
+<ol>
+<li><strong>安全性</strong>
+<ul>
+<li>比如将字符串用于文件路径、网络地址、数据库连接等敏感操作，内容不可更改能避免安全漏洞。</li>
+</ul>
+</li>
+<li><strong>线程安全</strong>
+<ul>
+<li>不需要额外同步，在多线程下天然安全。</li>
+</ul>
+</li>
+<li><strong>缓存优化</strong>
+<ul>
+<li>可以使用字符串常量池（String Pool），提升性能，减少内存开销。</li>
+</ul>
+</li>
+<li><strong>可作为 HashMap 的 key</strong>
+<ul>
+<li>不可变性保证  <code>hashCode</code>  一致性，HashMap 等容器可安全使用。</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token class-name">String</span> s1 <span class="token operator">=</span> <span class="token string">"abc"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token class-name">String</span> s2 <span class="token operator">=</span> s1<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"x"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//abc（未变）</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//xbc（新对象）</span></pre></td></tr></tbody></table></figure><h5 id="小结-2"><a class="anchor" href="#小结-2">#</a> ✅ 小结：</h5>
+<ul>
+<li><code>String</code>  不可变，底层是  <code>final char[]</code> ；</li>
+<li>类本身是  <code>final</code> ，不能被继承；</li>
+<li>不可变带来线程安全、性能优化、可安全作为 key 等多重优势。</li>
+</ul>
+<h3 id="问题4java-中是值传递还是引用传递请解释-string-基本类型-对象类型在方法中的传参行为"><a class="anchor" href="#问题4java-中是值传递还是引用传递请解释-string-基本类型-对象类型在方法中的传参行为">#</a> ❓问题 4：Java 中是值传递还是引用传递？请解释 String、基本类型、对象类型在方法中的传参行为。</h3>
+<p>🔹 Java 中<strong>只有值传递（pass-by-value）</strong>，但根据类型不同表现略有差异：</p>
+<h4 id="一-基本数据类型如-int-double-boolean"><a class="anchor" href="#一-基本数据类型如-int-double-boolean">#</a> 一、基本数据类型（如  <code>int</code> ,  <code>double</code> ,  <code>boolean</code> ）</h4>
+<ul>
+<li>方法调用时，<strong>传的是值的副本</strong>。</li>
+<li>在方法内修改，不会影响原始变量。</li>
+</ul>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token function">change</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出 5</span></pre></td></tr></tbody></table></figure><h4 id="二-引用类型如-string-自定义对象等"><a class="anchor" href="#二-引用类型如-string-自定义对象等">#</a> 二、引用类型（如  <code>String</code> , 自定义对象等）</h4>
+<ul>
+<li>方法调用时，<strong>传的是对象引用的副本</strong>（仍然是值传递）。</li>
+<li>在方法内通过该引用可以修改对象的属性，但不能改变原始引用本身的指向。</li>
+</ul>
+<pre><code>java复制编辑class Person {
+    String name;
+}
+void change(Person p) {
+    p.name = "Jack";     // ✅ 修改了属性
+    p = new Person();    // ❌ 改变了指向，仅对方法内有效
+    p.name = "Tom";
+}
+
+Person person = new Person();
+person.name = "Lucy";
+change(person);
+System.out.println(person.name); // 输出 Jack（不是 Tom）
+</code></pre>
+<hr>
+<h4 id="三-特殊说明string-是不可变对象"><a class="anchor" href="#三-特殊说明string-是不可变对象">#</a> 三、特殊说明： <code>String</code>  是不可变对象</h4>
+<p>即使是引用类型，但由于不可变（ <code>final</code>  +  <code>char[]</code> ），在方法中重新赋值是无效的：</p>
+<pre><code>java复制编辑void change(String s) {
+    s = "World";
+}
+
+String str = "Hello";
+change(str);
+System.out.println(str); // 输出 Hello
+</code></pre>
+<hr>
+<h4 id="结论口诀可以背"><a class="anchor" href="#结论口诀可以背">#</a> ✅ 结论口诀（可以背）：</h4>
+<blockquote>
+<p>Java 全是值传递，<br>
+基本类型传数值，<br>
+引用类型传地址的副本，<br>
+改属性能改，改引用没用！</p>
+</blockquote>
+<h3 id="问题4请说一下-java-中的继承和多态是如何实现的能举例说明一下吗"><a class="anchor" href="#问题4请说一下-java-中的继承和多态是如何实现的能举例说明一下吗">#</a> ❓问题 4：请说一下 Java 中的继承和多态是如何实现的？能举例说明一下吗？</h3>
+<h4 id="继承inheritance"><a class="anchor" href="#继承inheritance">#</a> 🔷 继承（Inheritance）</h4>
+<p>Java 使用  <code>extends</code>  关键字实现类的继承。</p>
+<ul>
+<li>子类继承父类的非私有成员（字段、方法）。</li>
+<li>支持单继承，但类可以实现多个接口。</li>
+</ul>
+<pre><code>java复制编辑class Animal {
+    void sound() {
+        System.out.println("动物叫");
+    }
+}
+class Dog extends Animal {
+    void sound() {
+        System.out.println("狗叫");
+    }
+}
+</code></pre>
+<hr>
+<h4 id="多态polymorphism"><a class="anchor" href="#多态polymorphism">#</a> 🔷 多态（Polymorphism）</h4>
+<p>多态分为两类：</p>
+<h5 id="1-编译时多态方法重载-overload"><a class="anchor" href="#1-编译时多态方法重载-overload">#</a> ✅ 1. 编译时多态（方法重载 Overload）：</h5>
+<ul>
+<li>同一个类中，方法名相同，<strong>参数列表不同</strong>（类型或数量不同）；</li>
+<li>与返回值无关；</li>
+<li>属于<strong>静态绑定</strong>，在编译期间确定调用哪个方法。</li>
+</ul>
+<pre><code>java复制编辑void print(int a) {}
+void print(String s) {}
+</code></pre>
+<hr>
+<h5 id="2-运行时多态方法重写-override"><a class="anchor" href="#2-运行时多态方法重写-override">#</a> ✅ 2. 运行时多态（方法重写 Override）：</h5>
+<ul>
+<li>子类重写父类方法（方法签名必须相同）；</li>
+<li>调用时根据对象的实际类型决定执行哪个方法；</li>
+<li>属于<strong>动态绑定</strong>，在运行时确定。</li>
+</ul>
+<pre><code>java复制编辑Animal a = new Dog(); // 向上转型
+a.sound();            // 输出 “狗叫”，即使 a 是 Animal 类型
+</code></pre>
+<blockquote>
+<p>✔ 运行时多态的核心：<strong>父类引用指向子类对象 + 方法重写 + 动态绑定</strong></p>
+</blockquote>
+<hr>
+<h4 id="结论口诀"><a class="anchor" href="#结论口诀">#</a> ✅ 结论口诀：</h4>
+<blockquote>
+<p><strong>继承用 extends，多态靠 override，引用指向父类，执行看子类。</strong></p>
+</blockquote>
+<h4 id="补充说明"><a class="anchor" href="#补充说明">#</a> ❗ 补充说明：</h4>
+<ol>
+<li><strong>方法重载（Overload）</strong> 其实<strong>不是多态的体现</strong>，它是<strong>编译时的多态</strong>（静态绑定）；</li>
+<li>真正的<strong>运行时多态</strong> 是通过<strong>方法重写 + 向上转型 + 动态绑定</strong>实现的。</li>
+</ol>
+<h4 id="追问进阶"><a class="anchor" href="#追问进阶">#</a> 📌 追问（进阶）：</h4>
+<p>你知道 Java 中方法重写时，访问修饰符和异常可以变动吗？比如父类方法抛出异常，子类能否不抛或抛其他的？</p>
+<h5 id="1-访问修饰符可以改变但有限制"><a class="anchor" href="#1-访问修饰符可以改变但有限制">#</a> 🔹1. <strong>访问修饰符可以改变，但有限制：</strong></h5>
+<ul>
+<li>子类重写方法的访问级别<strong>不能更严格</strong>；</li>
+<li>但<strong>可以更宽松</strong>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>父类方法修饰符</th>
+<th>子类允许的修饰符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td><code>protected</code> ,  <code>public</code></td>
+</tr>
+<tr>
+<td>默认（包访问）</td>
+<td>默认、 <code>protected</code> 、 <code>public</code></td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>❌ 不能被重写（不是重写，是新方法）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5 id="2-异常处理可以改变但有限制"><a class="anchor" href="#2-异常处理可以改变但有限制">#</a> 🔹2. <strong>异常处理：可以改变，但有限制：</strong></h5>
+<ul>
+<li>父类方法<strong>没有抛出异常</strong>：子类方法<strong>不能抛出检查型异常</strong>（Checked Exception），可以抛运行时异常（Unchecked）；</li>
+<li>父类方法抛出某个<strong>检查型异常</strong>：子类方法只能抛出<strong>相同或更小（子类）范围的异常</strong>；</li>
+<li>子类方法<strong>可以不抛出异常</strong>，即使父类抛出了异常。</li>
+</ul>
+<hr>
+<h5 id="举个例子说明"><a class="anchor" href="#举个例子说明">#</a> ✅ 举个例子说明：</h5>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">FileNotFoundException</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// OK（FileNotFoundException 是 IOException 子类）</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure><figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">RuntimeException</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// OK（抛运行时异常）</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure><figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">process</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">process</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// ❌ 编译错误（父类不抛，子类不能新增 Checked 异常）</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure><hr>
+<h5 id="小结口诀"><a class="anchor" href="#小结口诀">#</a> ✅ 小结口诀：</h5>
+<blockquote>
+<ul>
+<li>访问控制：只能放宽不能收紧；</li>
+<li>异常抛出：只可少不可多，<strong>Checked 异常需兼容</strong>；</li>
+<li><code>private</code>  方法不能重写，它是子类自己的新方法。</li>
+</ul>
+</blockquote>
+<h3 id="问题5java-中的异常分为哪两类如何处理它们分别举个例子"><a class="anchor" href="#问题5java-中的异常分为哪两类如何处理它们分别举个例子">#</a> ❓问题 5：Java 中的异常分为哪两类？如何处理它们？分别举个例子。</h3>
+<h4 id="java-中的异常分为两类"><a class="anchor" href="#java-中的异常分为两类">#</a> 🔷 Java 中的异常分为两类：</h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>分类别名</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CheckedException</strong></td>
+<td>编译时异常（受检异常）</td>
+<td>必须在代码中显式处理（try-catch 或 throws）</td>
+</tr>
+<tr>
+<td><strong>UncheckedException</strong></td>
+<td>运行时异常（非受检异常）</td>
+<td>编译器不会强制处理，程序运行时可能抛出</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="一-checked-exception受检异常"><a class="anchor" href="#一-checked-exception受检异常">#</a> ✅ 一、Checked Exception（受检异常）</h4>
+<ul>
+<li>继承自  <code>Exception</code> ，但<strong>不包括 RuntimeException</strong>；</li>
+<li>编译器强制要求处理；</li>
+<li>例如：
+<ul>
+<li><code>IOException</code></li>
+<li><code>SQLException</code></li>
+<li><code>ParseException</code></li>
+</ul>
+</li>
+</ul>
+<pre><code>java复制编辑public void readFile() throws IOException {
+    FileInputStream fis = new FileInputStream("a.txt"); // 可能抛 IOException
+}
+</code></pre>
+<hr>
+<h4 id="二-unchecked-exception非受检异常"><a class="anchor" href="#二-unchecked-exception非受检异常">#</a> ✅ 二、Unchecked Exception（非受检异常）</h4>
+<ul>
+<li>继承自  <code>RuntimeException</code> ；</li>
+<li>编译器不要求强制捕获；</li>
+<li>常见如：
+<ul>
+<li><code>NullPointerException</code></li>
+<li><code>ArrayIndexOutOfBoundsException</code></li>
+<li><code>IllegalArgumentException</code></li>
+</ul>
+</li>
+</ul>
+<pre><code>java复制编辑public void test() {
+    String s = null;
+    System.out.println(s.length()); // 运行时抛出 NullPointerException
+}
+</code></pre>
+<hr>
+<h4 id="三-异常处理方式"><a class="anchor" href="#三-异常处理方式">#</a> ✅ 三、异常处理方式</h4>
+<h5 id="1-try-catch-finally"><a class="anchor" href="#1-try-catch-finally">#</a> 1. try-catch-finally</h5>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">try</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment">// 有风险的代码</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment">// 异常处理</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token comment">// 无论是否异常，最终执行</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure><h5 id="2-throws-关键字方法签名抛出异常"><a class="anchor" href="#2-throws-关键字方法签名抛出异常">#</a> 2. throws 关键字（方法签名抛出异常）</h5>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment">// 把异常继续往外抛，由调用者处理</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">}</span></pre></td></tr></tbody></table></figure><h5 id="3-throw-抛出异常对象"><a class="anchor" href="#3-throw-抛出异常对象">#</a> 3. throw 抛出异常对象</h5>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"参数非法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></tbody></table></figure><h4 id="小结口诀-2"><a class="anchor" href="#小结口诀-2">#</a> ✅ 小结口诀：</h4>
+<blockquote>
+<ul>
+<li>Checked 必须处理，Unchecked 看你愿不愿意；</li>
+<li>try-catch 用于捕，throws 把锅往外推；</li>
+<li>finally 永远执行（除非  <code>System.exit(0)</code> ）。</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="追问"><a class="anchor" href="#追问">#</a> 📌 追问：</h4>
+<p>你知道 finally 中 return 会覆盖 try 或 catch 中的 return 吗？是否继续？</p>
+<h5 id="finally-的执行原则"><a class="anchor" href="#finally-的执行原则">#</a> 🔹  <code>finally</code>  的执行原则：</h5>
+<ul>
+<li>无论是否发生异常， <code>finally</code>  块都会执行；</li>
+<li>如果  <code>try</code>  或  <code>catch</code>  中有  <code>return</code> ，而  <code>finally</code>  也有  <code>return</code> ，<strong>最终返回的是  <code>finally</code>  中的值</strong>；</li>
+<li>如果  <code>finally</code>  中没有  <code>return</code> ，则执行完  <code>finally</code>  后仍返回  <code>try</code>  或  <code>catch</code>  中的值；</li>
+<li><code>System.exit(0)</code>  会直接终止 JVM， <code>finally</code>  不会被执行。</li>
+</ul>
+<hr>
+<h5 id="示例代码-3"><a class="anchor" href="#示例代码-3">#</a> ✅ 示例代码：</h5>
+<h6 id="情况1finally-无-return不影响返回值"><a class="anchor" href="#情况1finally-无-return不影响返回值">#</a> 🎯 情况 1：finally 无 return，不影响返回值</h6>
+<pre><code>java复制编辑public int test1() {
+    try {
+        return 1;
+    } finally {
+        System.out.println("finally 执行");
+    }
+}
+// 输出：finally 执行
+// 返回：1
+</code></pre>
+<h6 id="情况2finally-有-return会覆盖-try-的-return"><a class="anchor" href="#情况2finally-有-return会覆盖-try-的-return">#</a> 🎯 情况 2：finally 有 return，会覆盖 try 的 return</h6>
+<pre><code>java复制编辑public int test2() {
+    try {
+        return 1;
+    } finally {
+        return 2;
+    }
+}
+// 返回：2（覆盖了 try 的 return）
+</code></pre>
+<h6 id="情况3systemexit"><a class="anchor" href="#情况3systemexit">#</a> 🎯 情况 3：System.exit ()</h6>
+<pre><code>java复制编辑public int test3() {
+    try {
+        System.exit(0); // JVM 终止
+        return 1;
+    } finally {
+        System.out.println("finally"); // 不执行
+    }
+}
+</code></pre>
+<hr>
+<h5 id="小结口诀-3"><a class="anchor" href="#小结口诀-3">#</a> ✅ 小结口诀：</h5>
+<blockquote>
+<p>finally 永远会执行，<br>
+有 return 就把结果替，<br>
+try catch 返回全作废，<br>
+exit 一出谁都不配。</p>
+</blockquote>
+<div class="tags"><a href="/tags/Java/" rel="tag"><i class="ic i-tag"></i>Java</a><a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="ic i-tag"></i>面试</a><a href="/tags/ChatGPT/" rel="tag"><i class="ic i-tag"></i>ChatGPT</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于</span><time title="修改时间：2025-07-29 23:23:27" itemprop="dateModified" datetime="2025-07-29T23:23:27+08:00">2025-07-29</time></span></div><div class="reward"><button><i class="ic i-heartbeat"></i>赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img loading="lazy" data-src="/assets/wechatpay.webp" alt="张大爷 微信支付"><p>微信支付</p></div><div><img loading="lazy" data-src="/assets/alipay.webp" alt="张大爷 支付宝"><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>张大爷<i class="ic i-at"><em>@</em></i></li><li class="link"><strong>本文链接：</strong><a href="http://blog.icoders.club/java-interview-basics-01/" title="Java模拟面试题-基础篇-01">http://blog.icoders.club/java-interview-basics-01/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/java-interview-question-02/" rel="prev" itemprop="url" data-background-image="https://i.imgtg.com/2023/03/09/YSj7p.jpg" title="Java模拟面试题（2）"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>面试</span><h3>Java模拟面试题（2）</h3></a></div><div class="item right"><a href="/String-in-Java/" rel="next" itemprop="url" data-background-image="https://i.imgtg.com/2023/03/09/YSj7p.jpg" title="深入理解 Java 中的 == 和 equals()（面试高频）"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>面试</span><h3>深入理解 Java 中的 == 和 equals()（面试高频）</h3></a></div></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#java-%E9%9D%A2%E8%AF%95%E6%A8%A1%E6%8B%9F%E7%B3%BB%E5%88%97"><span class="toc-number">1.</span> <span class="toc-text"> Java 面试模拟系列 🧠📘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java-%E5%9F%BA%E7%A1%80%E4%B8%8E%E8%BF%9B%E9%98%B6"><span class="toc-number">2.</span> <span class="toc-text"> 💡Java 基础与进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%981java-%E4%B8%AD-%E5%92%8C-equals-%E7%9A%84%E5%8C%BA%E5%88%AB%E8%AF%B7%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E"><span class="toc-number">2.1.</span> <span class="toc-text"> ❓问题 1：Java 中  ==  和  equals()  的区别？请举例说明。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E5%8F%AF%E4%BB%8E%E5%A6%82%E4%B8%8B%E8%A7%92%E5%BA%A6%E8%BF%9B%E8%A1%8C%E5%9B%9E%E7%AD%94"><span class="toc-number">2.1.1.</span> <span class="toc-text"> ✨分析：可从如下角度进行回答</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%94%E6%A1%88"><span class="toc-number">2.1.2.</span> <span class="toc-text"> ✅答案：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.2.1.</span> <span class="toc-text"> 🧩 对于基本类型：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.2.2.</span> <span class="toc-text"> 🧩 对于引用类型：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">2.1.2.3.</span> <span class="toc-text"> ✅ 示例代码：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E9%97%AEstringintern-%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88%E5%AE%83%E4%B8%8E-%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB"><span class="toc-number">2.1.3.</span> <span class="toc-text"> 📌 追问： String.intern()  方法的作用是什么？它与  ==  有什么关系？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81-2"><span class="toc-number">2.1.3.1.</span> <span class="toc-text"> 🔍 示例代码：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.1.4.</span> <span class="toc-text"> 🧾 总结：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%982-java-%E7%9A%84%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%E5%AE%83%E4%BB%AC%E5%90%84%E8%87%AA%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">2.2.</span> <span class="toc-text"> ❓问题 2： Java 的八种基本数据类型是什么？它们各自的默认值是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E9%97%AE%E4%B8%BA%E4%BB%80%E4%B9%88-char-%E5%8D%A0%E4%B8%A4%E4%B8%AA%E5%AD%97%E8%8A%82java-%E4%B8%AD%E7%9A%84-char-%E8%83%BD%E8%A1%A8%E7%A4%BA%E5%93%AA%E4%BA%9B%E5%AD%97%E7%AC%A6%E4%BD%A0%E5%AF%B9-unicode-%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 📌 追问：为什么  char  占两个字节？Java 中的  char  能表示哪些字符？你对 Unicode 的理解？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">2.2.1.1.</span> <span class="toc-text"> ✨ 分析：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-char-%E5%8D%A0%E4%B8%A4%E4%B8%AA%E5%AD%97%E8%8A%82"><span class="toc-number">2.2.1.2.</span> <span class="toc-text"> 🔹 为什么  char  占两个字节？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#java-%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.1.3.</span> <span class="toc-text"> 🔹 Java 中使用什么字符编码？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#unicode-vs-utf-8-vs-utf-16"><span class="toc-number">2.2.1.4.</span> <span class="toc-text"> 🔹 Unicode vs UTF-8 vs UTF-16</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="toc-number">2.2.1.5.</span> <span class="toc-text"> 🔍 举个例子：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">2.2.1.6.</span> <span class="toc-text"> 📌 小结：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%983string-stringbuilder-%E5%92%8C-stringbuffer-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%E5%AE%83%E4%BB%AC%E5%90%84%E8%87%AA%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.3.</span> <span class="toc-text"> ❓问题 3：String、StringBuilder 和 StringBuffer 有什么区别？它们各自的适用场景？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 🔹 String（不可变对象）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stringbuilder%E5%8F%AF%E5%8F%98%E9%9D%9E%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 🔹 StringBuilder（可变，非线程安全）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stringbuffer%E5%8F%AF%E5%8F%98%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 🔹 StringBuffer（可变，线程安全）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94"><span class="toc-number">2.3.4.</span> <span class="toc-text"> ✅ 性能对比：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E9%97%AE%E8%BF%9B%E9%98%B6%E4%BD%A0%E7%9F%A5%E9%81%93-string-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84%E5%90%97%E5%AE%83%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84%E5%A5%BD%E5%A4%84%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">2.3.5.</span> <span class="toc-text"> 📌 追问（进阶）：你知道 String 为什么是不可变的吗？它不可变的好处是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-string-%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84"><span class="toc-number">2.3.5.1.</span> <span class="toc-text"> 🔹 为什么 String 是不可变的？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">2.3.5.2.</span> <span class="toc-text"> 🔒 不可变的好处：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-2"><span class="toc-number">2.3.5.3.</span> <span class="toc-text"> ✅ 小结：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%984java-%E4%B8%AD%E6%98%AF%E5%80%BC%E4%BC%A0%E9%80%92%E8%BF%98%E6%98%AF%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%E8%AF%B7%E8%A7%A3%E9%87%8A-string-%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B-%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E5%9C%A8%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E4%BC%A0%E5%8F%82%E8%A1%8C%E4%B8%BA"><span class="toc-number">2.4.</span> <span class="toc-text"> ❓问题 4：Java 中是值传递还是引用传递？请解释 String、基本类型、对象类型在方法中的传参行为。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%A6%82-int-double-boolean"><span class="toc-number">2.4.1.</span> <span class="toc-text"> 一、基本数据类型（如  int ,  double ,  boolean ）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E5%A6%82-string-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%B9%E8%B1%A1%E7%AD%89"><span class="toc-number">2.4.2.</span> <span class="toc-text"> 二、引用类型（如  String , 自定义对象等）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E7%89%B9%E6%AE%8A%E8%AF%B4%E6%98%8Estring-%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.4.3.</span> <span class="toc-text"> 三、特殊说明： String  是不可变对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA%E5%8F%A3%E8%AF%80%E5%8F%AF%E4%BB%A5%E8%83%8C"><span class="toc-number">2.4.4.</span> <span class="toc-text"> ✅ 结论口诀（可以背）：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%984%E8%AF%B7%E8%AF%B4%E4%B8%80%E4%B8%8B-java-%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84%E8%83%BD%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E%E4%B8%80%E4%B8%8B%E5%90%97"><span class="toc-number">2.5.</span> <span class="toc-text"> ❓问题 4：请说一下 Java 中的继承和多态是如何实现的？能举例说明一下吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%A7%E6%89%BFinheritance"><span class="toc-number">2.5.1.</span> <span class="toc-text"> 🔷 继承（Inheritance）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%80%81polymorphism"><span class="toc-number">2.5.2.</span> <span class="toc-text"> 🔷 多态（Polymorphism）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%BC%96%E8%AF%91%E6%97%B6%E5%A4%9A%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD-overload"><span class="toc-number">2.5.2.1.</span> <span class="toc-text"> ✅ 1. 编译时多态（方法重载 Overload）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%A4%9A%E6%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99-override"><span class="toc-number">2.5.2.2.</span> <span class="toc-text"> ✅ 2. 运行时多态（方法重写 Override）：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA%E5%8F%A3%E8%AF%80"><span class="toc-number">2.5.3.</span> <span class="toc-text"> ✅ 结论口诀：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E"><span class="toc-number">2.5.4.</span> <span class="toc-text"> ❗ 补充说明：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E9%97%AE%E8%BF%9B%E9%98%B6"><span class="toc-number">2.5.5.</span> <span class="toc-text"> 📌 追问（进阶）：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E4%BD%86%E6%9C%89%E9%99%90%E5%88%B6"><span class="toc-number">2.5.5.1.</span> <span class="toc-text"> 🔹1. 访问修饰符可以改变，但有限制：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E4%BD%86%E6%9C%89%E9%99%90%E5%88%B6"><span class="toc-number">2.5.5.2.</span> <span class="toc-text"> 🔹2. 异常处理：可以改变，但有限制：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E"><span class="toc-number">2.5.5.3.</span> <span class="toc-text"> ✅ 举个例子说明：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93%E5%8F%A3%E8%AF%80"><span class="toc-number">2.5.5.4.</span> <span class="toc-text"> ✅ 小结口诀：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%985java-%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%88%86%E4%B8%BA%E5%93%AA%E4%B8%A4%E7%B1%BB%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%AE%83%E4%BB%AC%E5%88%86%E5%88%AB%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="toc-number">2.6.</span> <span class="toc-text"> ❓问题 5：Java 中的异常分为哪两类？如何处理它们？分别举个例子。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#java-%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%88%86%E4%B8%BA%E4%B8%A4%E7%B1%BB"><span class="toc-number">2.6.1.</span> <span class="toc-text"> 🔷 Java 中的异常分为两类：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-checked-exception%E5%8F%97%E6%A3%80%E5%BC%82%E5%B8%B8"><span class="toc-number">2.6.2.</span> <span class="toc-text"> ✅ 一、Checked Exception（受检异常）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-unchecked-exception%E9%9D%9E%E5%8F%97%E6%A3%80%E5%BC%82%E5%B8%B8"><span class="toc-number">2.6.3.</span> <span class="toc-text"> ✅ 二、Unchecked Exception（非受检异常）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">2.6.4.</span> <span class="toc-text"> ✅ 三、异常处理方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-try-catch-finally"><span class="toc-number">2.6.4.1.</span> <span class="toc-text"> 1. try-catch-finally</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-throws-%E5%85%B3%E9%94%AE%E5%AD%97%E6%96%B9%E6%B3%95%E7%AD%BE%E5%90%8D%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8"><span class="toc-number">2.6.4.2.</span> <span class="toc-text"> 2. throws 关键字（方法签名抛出异常）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-throw-%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.6.4.3.</span> <span class="toc-text"> 3. throw 抛出异常对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93%E5%8F%A3%E8%AF%80-2"><span class="toc-number">2.6.5.</span> <span class="toc-text"> ✅ 小结口诀：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%BD%E9%97%AE"><span class="toc-number">2.6.6.</span> <span class="toc-text"> 📌 追问：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#finally-%E7%9A%84%E6%89%A7%E8%A1%8C%E5%8E%9F%E5%88%99"><span class="toc-number">2.6.6.1.</span> <span class="toc-text"> 🔹  finally  的执行原则：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81-3"><span class="toc-number">2.6.6.2.</span> <span class="toc-text"> ✅ 示例代码：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%83%85%E5%86%B51finally-%E6%97%A0-return%E4%B8%8D%E5%BD%B1%E5%93%8D%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">2.6.6.2.1.</span> <span class="toc-text"> 🎯 情况 1：finally 无 return，不影响返回值</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%83%85%E5%86%B52finally-%E6%9C%89-return%E4%BC%9A%E8%A6%86%E7%9B%96-try-%E7%9A%84-return"><span class="toc-number">2.6.6.2.2.</span> <span class="toc-text"> 🎯 情况 2：finally 有 return，会覆盖 try 的 return</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%83%85%E5%86%B53systemexit"><span class="toc-number">2.6.6.2.3.</span> <span class="toc-text"> 🎯 情况 3：System.exit ()</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93%E5%8F%A3%E8%AF%80-3"><span class="toc-number">2.6.6.3.</span> <span class="toc-text"> ✅ 小结口诀：</span></a></li></ol></li></ol></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/java-interview-question-01/" rel="bookmark" title="Java模拟面试题（1）">Java模拟面试题（1）</a></li><li><a href="/java-interview-question-02/" rel="bookmark" title="Java模拟面试题（2）">Java模拟面试题（2）</a></li><li class="active"><a href="/java-interview-basics-01/" rel="bookmark" title="Java模拟面试题-基础篇-01">Java模拟面试题-基础篇-01</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="张大爷" src="/assets/avatar.webp"><p class="name" itemprop="name">张大爷</p><div class="description" itemprop="description"></div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">7</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">10</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">13</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/admin-zhang" class="item github" title="https://github.com/admin-zhang"><i class="ic i-github"></i></a><a target="_blank" rel="noopener" href="https://gitee.com/admin-zhang" class="item gitee" title="https://gitee.com/admin-zhang"><i class="ic i-gitee"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-user"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends" rel="section"><i class="ic i-heart"></i>友链</a></li><li class="item"><a href="/links" rel="section"><i class="ic i-magic"></i>链接</a></li><li class="item"><a href="/stat" rel="section"><i class="ic i-stat"></i>统计</a></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/String-in-Java/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/java-interview-question-02/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/course/" title="分类于教程">教程</a><i class="ic i-angle-right"></i><a href="/categories/course/Linux/" title="分类于Linux">Linux</a><i class="ic i-angle-right"></i><a href="/categories/course/Linux/Git/" title="分类于Git">Git</a></div><span><a href="/installGitOnLinux/">Linux中手动安装Git</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/course/" title="分类于教程">教程</a><i class="ic i-angle-right"></i><a href="/categories/course/java/" title="分类于Java">Java</a><i class="ic i-angle-right"></i><a href="/categories/course/java/arrange/" title="分类于项目部署">项目部署</a></div><span><a href="/Linux%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2SpringBoot-Vue%E9%A1%B9%E7%9B%AE/">Linux系统部署SpringBoot+Vue项目</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于Java">Java</a><i class="ic i-angle-right"></i><a href="/categories/java/interview/" title="分类于面试">面试</a></div><span><a href="/String-in-Java/">深入理解 Java 中的 == 和 equals()（面试高频）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/interview/" title="分类于面试">面试</a></div><span><a href="/java-interview-question-02/">Java模拟面试题（2）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/interview/" title="分类于面试">面试</a></div><span><a href="/java-interview-question-01/">Java模拟面试题（1）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/database/" title="分类于数据库">数据库</a><i class="ic i-angle-right"></i><a href="/categories/database/other/" title="分类于其它">其它</a></div><span><a href="/%E9%AB%98%E9%A2%91%20SQL%2050%20%E9%A2%98%EF%BC%88%E5%9F%BA%E7%A1%80%E7%89%88%EF%BC%89/">高频 SQL 50 题（基础版）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/interview/" title="分类于面试">面试</a></div><span><a href="/java-interview-basics-01/">Java模拟面试题-基础篇-01</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2><ul class="leancloud-recent-comment" id="new-comment"></ul></div></div><div class="status"><div class="copyright">© 2025 -<span itemprop="copyrightYear">2025</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">张大爷 @ 碎银几两</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">99k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">1:30</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div><br><span style="display:inline;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:var(--grey-5);"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">京ICP备2023036429号</a><br><a target="_blank" href="https://beian.mps.gov.cn/#/query/webSearch?code=11011402053974"><img loading="lazy" decoding="async" data-src="/assets/ICP.webp" style="max-width: 2em;display:inline;" width="20" height="20" alt="备案">京公网安备11011402053974号</a></span><div style="width: 100%; text-align: center;"><span id="time">此站已存活 0 天 00 小时 00 分 00 秒</span></div><script>function createtime() {
+    const createTime = new Date("2025/07/25 00:00:00"); // 确保这个值可被 JS 识别
+    const now = new Date();
+    const diff = (now - createTime) / 1000;
+
+    const dnum = Math.floor(diff / (60 * 60 * 24));
+    const hnum = String(Math.floor((diff / (60 * 60)) % 24)).padStart(2, '0');
+    const mnum = String(Math.floor((diff / 60) % 60)).padStart(2, '0');
+    const snum = String(Math.floor(diff % 60)).padStart(2, '0');
+
+    document.getElementById("time").innerHTML =
+        `此站已存活 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒`;
+}
+
+setInterval(createtime, 1000);</script></div><script src="https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js"></script><div id="busuanzi-wrap"><span class="ic i-eye"></span><span id="busuanzi_container_site_pv">本站访问量 <span id="busuanzi_value_site_pv"></span> 次</span> | <span class="ic i-user"></span><span id="busuanzi_container_site_uv">本站访客量 <span id="busuanzi_value_site_uv"></span> 次</span></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+        path: `java-interview-basics-01/`,
+        favicon: {
+        show: `不负韶华`,
+        hide: `以梦为马！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: ["https://music.163.com/song?id=1387098940"],
+    fancybox: true,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    },
+    ignores: [
+        (uri) => uri.includes('#'),
+        (uri) => new RegExp(LOCAL.path + '$').test(uri),
+            []
+    ]
+};
+</script><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-6-M/pace/1.2.4/pace.min.js" async=""></script><script src="/js/siteInit.js?v=0.4.2" type="module" fetchpriority="high" defer=""></script></body></html>
